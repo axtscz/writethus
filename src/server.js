@@ -11,7 +11,7 @@ const seed = randomseed.create("ALEX");
 
 const server = express();
 
-server.use('/assets', express.static('assets'));
+server.use(__dirname + '/assets', express.static('assets'));
 
 server.get('/', (req, res) => {
     var characters = []
