@@ -1,19 +1,17 @@
 import React, {Component, PropTypes} from 'react';
+import Character from "./Character";
 
 export default class App extends Component {
     render() {
-        const {isMobile} = this.props;
         const {characters} = this.props;
 
         return (
             <div className="container">
                 <h1>WriteThus</h1>
-                <div>
+                <div className="item-container">
+                    <h2>Characters</h2>
                     {this.props.characters.map((character, index) => {
-                        return <div key={character.name}>
-                            <h4>{character.name}</h4>
-                            <p>{character.culture} {character.gender}</p>
-                        </div>
+                        return <Character character={character} key={index}/>
                     })}
                 </div>
             </div>
@@ -22,6 +20,5 @@ export default class App extends Component {
 }
 
 App.propTypes = {
-    isMobile: PropTypes.bool.isRequired,
     characters: PropTypes.array
 };
