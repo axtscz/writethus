@@ -1,5 +1,7 @@
 # react-server-boilerplate 
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/axtscz/writethus.svg)](https://greenkeeper.io/)
+
 React server side rendering boilerplate
 
 ## Installation
