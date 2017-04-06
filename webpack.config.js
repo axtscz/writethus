@@ -56,7 +56,7 @@ module.exports = [
       filename: 'bundle.js'
     },
     plugins: clientLoaders.concat([
-      new ExtractTextPlugin('index.css', {
+      new ExtractTextPlugin( {filename: "index.css",
         allChunks: true
       })
     ]),
