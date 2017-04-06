@@ -8,10 +8,12 @@
     "culture": "ES"
   },
   {
-    "location": "Tokyo"
+    "location": "Tokyo, Japan",
+    "culture": "JP"
   },
   {
-    "location": "Paris"
+    "location": "Paris, France",
+    "culture": "FR"
   },
   {
     "location": "Canadian Wilderness",
@@ -22,7 +24,15 @@
     "culture": "EN"
   },
   {
-    "location": "Backwoods of Tennessee",
+    "location": "Backwoods of Kentucky",
+    "culture": "EN"
+  },
+  {
+    "location": "London, UK",
+    "culture": "EN"
+  },
+  {
+    "location": "Moscow, Russia",
     "culture": "EN"
   },
   {
