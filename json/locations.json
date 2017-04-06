@@ -1,0 +1,48 @@
+[
+  {
+    "location": "Mexico City",
+    "culture": "ES"
+  },
+  {
+    "location": "Barcelona, Spain",
+    "culture": "ES"
+  },
+  {
+    "location": "Tokyo"
+  },
+  {
+    "location": "Paris"
+  },
+  {
+    "location": "Canadian Wilderness",
+    "culture": "EN"
+  },
+  {
+    "location": "New York City",
+    "culture": "EN"
+  },
+  {
+    "location": "Backwoods of Tennessee",
+    "culture": "EN"
+  },
+  {
+    "location": "Tropical Paradise",
+    "culture": "EN"
+  },
+  {
+    "location": "Galactic Imperium",
+    "culture": "EN"
+  },
+  {
+    "location": "Rome, Italy",
+    "culture": "IT"
+  },
+  {
+    "location": "Naples, Italy",
+    "culture": "IT"
+  },
+  {
+    "location": "Sicily, Italy",
+    "culture": "IT"
+  }
+]
