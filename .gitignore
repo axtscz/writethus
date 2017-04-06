@@ -4,5 +4,3 @@ node_modules
 dist/*.js
 dist/assets/*.js
 npm-debug.log
-/dist/assets/skeleton.min.css
-/dist/assets/style.min.css
