@@ -23,11 +23,11 @@ server.get(["/", '/:id'], (req, res) => {
 
         //generate all the data
         let culture = utility.generateCulture(seed);
-        let characters = utility.generateCharacters(seed, 5, culture);
-        let location = utility.pickLocation(seed, culture);
+        let characters = utility.generateCharacters(seed, 5);
+        let location = utility.pickLocation(seed);
         let genre = utility.pickGenre(seed);
-
         let url = "writeth.us"+ req.url.toString();
+
         const initialState = {characters: characters, url: url, location: location.location, genre: genre.genre};
         const appString = renderToString(<App {...initialState} />);
         res.send(template({

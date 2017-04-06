@@ -15,24 +15,20 @@ export default class App extends Component {
                 <p>Write a story using the following components</p>
                 <a href="/">New</a>
 
-                <div className="item-container">
-                    <div className="item">
+                <div className="row">
+                    <div className="four columns">
+                        <h3>Location</h3>
+                        <Location location={location}/>
+                    </div>
+                    <div className="four columns">
                         <h3>Characters</h3>
                         {this.props.characters.map((character, index) => {
                             return <Character character={character} key={index}/>
                         })}
                     </div>
-                    <div className="item">
-                        <h3>Location</h3>
-                        <div className="item-container">
-                            <Location location={location}/>
-                        </div>
-                    </div>
-                    <div className="item">
+                    <div className="four columns">
                         <h3>Genre</h3>
-                        <div className="item-container">
-                            <Genre genre={genre}/>
-                        </div>
+                        <Genre genre={genre}/>
                     </div>
                 </div>
 
