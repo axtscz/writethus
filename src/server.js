@@ -25,8 +25,8 @@ server.get(["/", '/:id'], (req, res) => {
             let name = names[seed(names.length)];
             characters.push(name);
         }
-
-        const initialState = {characters: characters};
+        let url = "writeth.us"+ req.url.toString();
+        const initialState = {characters: characters, url: url};
         const appString = renderToString(<App {...initialState} />);
         res.send(template({
             body: appString,

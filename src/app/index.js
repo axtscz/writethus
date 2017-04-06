@@ -4,7 +4,7 @@ import Character from "./Character";
 export default class App extends Component {
     render() {
         const {characters} = this.props;
-
+        const {url} = this.props;
         return (
             <div>
                 <h1>WriteThus</h1>
@@ -16,11 +16,14 @@ export default class App extends Component {
                         return <Character character={character} key={index}/>
                     })}
                 </div>
+                <p>Share this prompt</p>
+                <input type="text" value={url} disabled/>
             </div>
         );
     }
 }
 
 App.propTypes = {
-    characters: PropTypes.array
+    characters: PropTypes.array,
+    url: PropTypes.string
 };
