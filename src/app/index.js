@@ -6,9 +6,10 @@ import Genre from "./Components/Genre";
 export default class App extends Component {
     render() {
         const {characters} = this.props;
-        const {url} = this.props;
+        const {seed} = this.props;
         const {location} = this.props;
         const {genre} = this.props;
+        const url = "https://writeth.us/" + this.props.seed;
         return (
             <div>
                 <h1>WriteThus</h1>
@@ -43,5 +44,6 @@ App.propTypes = {
     characters: PropTypes.array,
     location: PropTypes.string,
     genre: PropTypes.string,
+    seed: PropTypes.string,
     url: PropTypes.string
 };
