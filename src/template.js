@@ -8,7 +8,7 @@ export default ({body, title, initialState}) => {
         <meta keywords="writing prompt, writing prompt generator, creative writing prompts"/>
         <link rel="manifest" href="/assets/manifest.json">
         <link rel="stylesheet" href="/assets/skeleton.min.css" />
-        <link rel="stylesheet" href="/assets/style.css" />
+        <link rel="stylesheet" href="/assets/style.min.css" />
       </head>
       
       <body>
