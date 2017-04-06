@@ -6,28 +6,38 @@ import template from './template';
 import names from "../json/master.json"
 import randomseed from "random-seed"
 import _ from "lodash"
+import crypto from "crypto"
+import utility from "../lib/utility.js"
 
-const seed = randomseed.create("ALEX");
+var seed = randomseed.create("ALEX");
 
 const server = express();
 
 server.use('/assets', express.static(__dirname + '/assets'));
 
-server.get('/', (req, res) => {
-    var characters = []
-    for (var i = 0; i < seed.intBetween(2, 5); i++){
-        var name = names[seed(names.length)];
-        characters.push(name)
+server.get(["/", '/:id'], (req, res) => {
+    let seedValue = "";
+    if (req.params.id) {
+        seedValue = req.params.id;
+        seed = randomseed.create(seedValue);
+        let characters = [];
+        for (let i = 0; i < seed.intBetween(2, 5); i++) {
+            let name = names[seed(names.length)];
+            characters.push(name);
+        }
+
+        const initialState = {characters: characters};
+        const appString = renderToString(<App {...initialState} />);
+        res.send(template({
+            body: appString,
+            title: 'WriteThus',
+            initialState: JSON.stringify(initialState)
+        }));
+    } else {
+        seedValue = utility.randomSeedString(6);
+        res.redirect("/" + seedValue);
     }
 
-    const initialState = {characters: characters};
-    const appString = renderToString(<App {...initialState} />);
-
-    res.send(template({
-        body: appString,
-        title: 'WriteThus',
-        initialState: JSON.stringify(initialState)
-    }));
 });
 
 server.listen(8080);

@@ -6,9 +6,11 @@ export default class App extends Component {
         const {characters} = this.props;
 
         return (
-            <div className="container">
+            <div>
                 <h1>WriteThus</h1>
-                <h2>Characters</h2>
+                <p>Write a story using the following components</p>
+                <a href="/">New</a>
+                <h3>Characters</h3>
                 <div className="item-container">
                     {this.props.characters.map((character, index) => {
                         return <Character character={character} key={index}/>
