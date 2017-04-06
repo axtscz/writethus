@@ -41,6 +41,7 @@
     "random-seed": "^0.3.0",
     "react": "^15.2.0",
     "react-dom": "^15.2.0",
-    "react-router": "^4.0.0"
+    "react-router": "^4.0.0",
+    "sw-toolbox": "^3.6.0"
   }
 }

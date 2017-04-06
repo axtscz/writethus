@@ -1,0 +1,8 @@
+{
+  "name": "WriteThus",
+  "short_name": "WriteThus",
+  "lang": "en-US",
+  "start_url": "/",
+  "display": "Browser",
+  "theme_color": "#1d1d1d"
+}
