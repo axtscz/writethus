@@ -20,11 +20,15 @@ server.get(["/", '/:id'], (req, res) => {
     if (req.params.id) {
         seedValue = req.params.id;
         seed = randomseed.create(seedValue);
+
+        //generate all the data
         let culture = utility.generateCulture(seed);
         let characters = utility.generateCharacters(seed, 5, culture);
         let location = utility.pickLocation(seed, culture);
+        let genre = utility.pickGenre(seed);
+
         let url = "writeth.us"+ req.url.toString();
-        const initialState = {characters: characters, url: url, location: location.location};
+        const initialState = {characters: characters, url: url, location: location.location, genre: genre.genre};
         const appString = renderToString(<App {...initialState} />);
         res.send(template({
             body: appString,

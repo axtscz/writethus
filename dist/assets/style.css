@@ -1,17 +1,6 @@
-body {
-    font-family: sans-serif;
-    background-color: #1d1d1d;
-    color: #EDE5CC;
-}
-
-.container{
-    padding: 20px;
-}
-
-.character{
-    margin: 10px;
-}
-
 .item-container{
     display: flex;
+}
+.item-container .item {
+    margin: 15px;
 }

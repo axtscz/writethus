@@ -8,6 +8,7 @@ export default ({body, title, initialState}) => {
         <meta keywords="writing prompt, writing prompt generator, creative writing prompts"/>
         <link rel="manifest" href="/assets/manifest.json">
         <link rel="stylesheet" href="/assets/skeleton.min.css" />
+        <link rel="stylesheet" href="/assets/style.css" />
       </head>
       
       <body>
@@ -15,18 +16,6 @@ export default ({body, title, initialState}) => {
       </body>
       
       <script src="/assets/bundle.js"></script>
-      <script>
-        if ('serviceWorker' in navigator) {
-          navigator.serviceWorker.register('/sw', {scope: '/'})
-          .then(function(reg) {
-            // registration worked
-            console.log('Registration succeeded. Scope is ' + reg.scope);
-          }).catch(function(error) {
-            // registration failed
-            console.log('Registration failed with ' + error);
-          });
-        }
-      </script>
     </html>
   `;
 };
