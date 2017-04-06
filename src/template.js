@@ -5,7 +5,9 @@ export default ({body, title, initialState}) => {
       <head>
         <script>window.__APP_INITIAL_STATE__ = ${initialState}</script>
         <title>${title}</title>
-        <meta keywords="writing prompt, writing prompt generator, creative writing prompts"/>
+        <meta charset="utf-8">
+        <meta name="Description" content="A creative writing prompt generator. It generates a range of names, locations, and genres.">
+        <meta name="Keywords" content="creative writing, prompt generator, generator, creative writing prompt generator, writing prompt generator">
         <link rel="manifest" href="/assets/manifest.json">
         <link rel="stylesheet" href="/assets/skeleton.min.css" />
         <link rel="stylesheet" href="/assets/style.min.css" />
