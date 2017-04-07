@@ -5,9 +5,13 @@ import React, {Component, PropTypes} from 'react';
 
 export default class Character extends React.Component {
     render() {
+        function capitalize(s)
+        {
+            return s[0].toUpperCase() + s.slice(1);
+        }
         return (
             <div>
-                <h4>{this.props.character.name} <span>{this.props.character.gender}</span></h4>
+                <h4>{capitalize(this.props.character.name.toLowerCase())} <span>{this.props.character.gender}</span></h4>
                 <p>{this.props.character.culture}</p>
             </div>
         );

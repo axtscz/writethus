@@ -22,6 +22,7 @@ server.get(["/", '/:id'], (req, res) => {
         seed = randomseed.create(seedValue);
     } else {
         seedValue = utility.randomSeedString(6);
+        seed = randomseed.create(seedValue);
     }
     //generate all the data
     let culture = utility.generateCulture(seed);
