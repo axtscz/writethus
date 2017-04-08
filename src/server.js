@@ -1,17 +1,17 @@
-import express from 'express';
-import React from 'react';
-import {renderToString} from 'react-dom/server';
-import App from './app';
-import template from './template';
-import randomseed from "random-seed"
-import utility from "../lib/utility.js"
+import express from "express";
+import React from "react";
+import {renderToString} from "react-dom/server";
+import App from "./app";
+import template from "./template";
+import randomseed from "random-seed";
+import utility from "../lib/utility.js";
 
 var seed = randomseed.create("ALEX");
 
 const server = express();
 
 server.use('/assets', express.static(__dirname + '/assets'));
-server.get("/sw", function(req, res){
+server.get("/sw", function (req, res) {
     res.sendFile(__dirname + "/assets/serviceworker/serviceworker.js")
 });
 
@@ -25,13 +25,20 @@ server.get(["/", '/:id'], (req, res) => {
         seed = randomseed.create(seedValue);
     }
     //generate all the data
+
     let culture = utility.generateCulture(seed);
-    let characters = utility.generateCharacters(seed, 5);
+    let characters = utility.generateCharacters(seed, 5, "EN");
     let location = utility.pickLocation(seed);
     let genre = utility.pickGenre(seed);
-    let url = "writeth.us"+ req.url.toString();
+    let url = "writeth.us" + req.url.toString();
 
-    const initialState = {characters: characters, url: url, location: location.location, genre: genre.genre, seed: seedValue};
+    const initialState = {
+        characters: characters,
+        url: url,
+        location: location.location,
+        genre: genre.genre,
+        seed: seedValue
+    };
     const appString = renderToString(<App {...initialState} />);
     res.send(template({
         body: appString,
