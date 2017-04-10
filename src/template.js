@@ -9,7 +9,7 @@ export default ({body, title, initialState}) => {
         <meta name="Description" content="A creative writing prompt generator. It generates a range of names, locations, and genres.">
         <meta name="description" content="A creative writing prompt generator. It generates a range of names, locations, and genres.">
         <meta property="og:title" content="WriteThus" />
-        <meta property="og:description" content="A creative writing prompt generator. It generates a range of names, locations, and genres." />
+        <meta property="og:description" content="A creative writing prompt generator. It generates a range of names, locations, and genres."/>
         <meta name="Keywords" content="creative writing, prompt generator, generator, creative writing prompt generator, writing prompt generator">
         <link rel="manifest" href="/assets/manifest.json">
       </head>
