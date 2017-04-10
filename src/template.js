@@ -10,15 +10,15 @@ export default ({body, title, initialState}) => {
         <meta name="description" content="A creative writing prompt generator. It generates a range of names, locations, and genres.">
         <meta property="og:title" content="WriteThus" />
         <meta property="og:description" content="A creative writing prompt generator. It generates a range of names, locations, and genres."/>
-        <meta name="Keywords" content="creative writing, prompt generator, generator, creative writing prompt generator, writing prompt generator">
+        <meta name="Keywords" content="creative writing, prompt generator, generator, creative writing prompt generator, writing prompt generator, WriteThus">
         <link rel="manifest" href="/assets/manifest.json">
       </head>
       
       <body>
         <div id="root" class="container">${body}</div>
       </body>
-        <link rel="stylesheet" href="/assets/skeleton.min.css" />
-        <link rel="stylesheet" href="/assets/style.min.css" />
+      <link rel="stylesheet" href="/assets/skeleton.min.css" />
+      <link rel="stylesheet" href="/assets/style.min.css" />
       <script src="/assets/bundle.js"></script>
       <script>
           (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
