@@ -7,9 +7,9 @@ var productionPluginDefine = isProduction ? [
   new webpack.DefinePlugin({'process.env': {'NODE_ENV': JSON.stringify('production')}})
 ] : [];
 var clientLoaders = isProduction ? productionPluginDefine.concat([
-  new webpack.optimize.DedupePlugin(),
-  new webpack.optimize.OccurrenceOrderPlugin(),
-  new webpack.optimize.UglifyJsPlugin({ compress: { warnings: false }, sourceMap: false })
+  // new webpack.optimize.DedupePlugin(),
+  // new webpack.optimize.OccurrenceOrderPlugin(),
+  // new webpack.optimize.UglifyJsPlugin({ compress: { warnings: false }, sourceMap: false })
 ]) : [];
 
 var commonLoaders = [

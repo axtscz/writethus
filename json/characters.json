@@ -1,16 +1,14 @@
 [
-  {"plotline": "A retired detective"},
-  {"plotline": "A teenager lost in life"},
-  {"plotline": "A intelligence analyst"},
-  {"plotline": "A Hampton's Housewife"},
-  {"plotline": "A maid who has seen too much"},
-  {"plotline": "A retired detective"},
-  {"plotline": "A retired detective"},
-  {"plotline": "A retired detective"},
-  {"plotline": "A retired detective"},
-  {"plotline": "A retired detective"},
-  {"plotline": "A retired detective"},
-  {"plotline": "A retired detective"},
-  {"plotline": "A retired detective"},
-  {"plotline": "A retired detective"}
+  {"plotline": "A retired detective", "gender": ["M", "F"]},
+  {"plotline": "A teenager lost in life", "gender": ["M", "F"]},
+  {"plotline": "A intelligence analyst", "gender": ["M", "F"]},
+  {"plotline": "A housewife", "gender": ["F"]},
+  {"plotline": "A maid who has seen too much", "gender": ["F"]},
+  {"plotline": "A brilliant scientist", "gender": ["M", "F"]},
+  {"plotline": "A private eye", "gender": ["M", "F"]},
+  {"plotline": "A military general", "gender": ["M", "F"]},
+  {"plotline": "UN Secretary General", "gender": ["M", "F"]},
+  {"plotline": "Communist President", "gender": ["M"]},
+  {"plotline": "Time traveller", "gender": ["M", "F"]},
+  {"plotline": "Astronaut", "gender": ["M", "F"]}
 ]

@@ -61,4 +61,15 @@ describe("Generate Functions", function(){
             });
         })
     });
+    describe("Pick Gender",function () {
+        describe("Pick a gender", function () {
+            let seed = randomseed();
+            it("it should return an String", function () {
+                utilities.default.pickGender(seed).should.be.a.String();
+            });
+            it("it should be either M or F", function () {
+                utilities.default.pickGender(seed).should.match(/[FM]/);
+            });
+        })
+    });
 });
