@@ -7,7 +7,7 @@
     "start": "npm run build && cd dist && node server",
     "build": "webpack",
     "lint": "functionhappy | snazzy",
-    "test": "mocha"
+    "test": "mocha --compilers js:babel-core/register"
   },
   "repository": {
     "type": "git",
