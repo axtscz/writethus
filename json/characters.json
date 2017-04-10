@@ -10,5 +10,12 @@
   {"plotline": "UN Secretary General", "gender": ["M", "F"]},
   {"plotline": "Communist President", "gender": ["M"]},
   {"plotline": "Time traveller", "gender": ["M", "F"]},
+  {"plotline": "Security Guard", "gender": ["M", "F"]},
+  {"plotline": "Oil Baron", "gender": ["M", "F"]},
+  {"plotline": "Corporate Exec", "gender": ["M", "F"]},
+  {"plotline": "Clown", "gender": ["M", "F"]},
+  {"plotline": "Government Engineer", "gender": ["M", "F"]},
+  {"plotline": "Farmer", "gender": ["M", "F"]},
+  {"plotline": "Forensic Investigator", "gender": ["M", "F"]},
   {"plotline": "Astronaut", "gender": ["M", "F"]}
 ]
