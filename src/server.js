@@ -42,7 +42,7 @@ server.get(["/", '/:id'], (req, res) => {
     const appString = renderToString(<App {...initialState} />);
     res.send(template({
         body: appString,
-        title: 'WriteThus',
+        title: 'WriteThus - Writing Prompts',
         initialState: JSON.stringify(initialState)
     }));
 
