@@ -9,8 +9,9 @@ import utility from "../lib/utility.js";
 var seed = randomseed.create("ALEX");
 
 const server = express();
-
-server.use('/assets', express.static(__dirname + '/assets'));
+const oneDay = 86400000;
+server.use('/assets', express.static(__dirname + '/assets', {maxage: oneDay}));
+server.use('/fonts', express.static(__dirname + '/assets/fonts', {maxage: oneDay*31}));
 server.get("/sw", function (req, res) {
     res.sendFile(__dirname + "/assets/serviceworker/serviceworker.js")
 });

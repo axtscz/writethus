@@ -18,17 +18,17 @@ export default class App extends Component {
 
                 <div className="row">
                     <div className="four columns">
-                        <h3>Location</h3>
+                        <h3><i className="fa fa-globe" aria-hidden="true"></i> Location</h3>
                         <Location location={location}/>
                     </div>
                     <div className="four columns">
-                        <h3>Characters</h3>
+                        <h3><i className="fa fa-user" aria-hidden="true"></i> Characters</h3>
                         {this.props.characters.map((character, index) => {
                             return <Character character={character} key={index}/>
                         })}
                     </div>
                     <div className="four columns">
-                        <h3>Genre</h3>
+                        <h3><i className="fa fa-book" aria-hidden="true"></i> Genre</h3>
                         <Genre genre={genre}/>
                     </div>
                 </div>
