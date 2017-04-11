@@ -8,11 +8,13 @@ export default ({body, title, initialState}) => {
         <meta charset="utf-8">
         <meta name="Description" content="A creative writing prompt generator. It generates a range of names, locations, and genres.">
         <meta name="description" content="A creative writing prompt generator. It generates a range of names, locations, and genres.">
+        <meta hreflang="en"/>
         <meta property="og:title" content="WriteThus" />
         <meta property="og:description" content="A creative writing prompt generator. It generates a range of names, locations, and genres."/>
         <meta name="Keywords" content="creative writing, prompt generator, generator, creative writing prompt generator, writing prompt generator, WriteThus">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="manifest" href="/assets/manifest.json">
+        <link rel="manifest" href="/assets/img/manifest.json">
+        <link rel="favicon" href="/assets/img/favicon.ico"/>
       </head>
       
       <body>
@@ -20,7 +22,7 @@ export default ({body, title, initialState}) => {
       </body>
       <link rel="stylesheet" href="/assets/skeleton.min.css" />
       <link rel="stylesheet" href="/assets/style.min.css" />
-      <link rel="stylesheet" href="/assets/font-awesome.min.min.css" />
+      <link rel="stylesheet" href="/assets/font-awesome.min.css" />
       <script src="/assets/bundle.js"></script>
       <script>
           (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

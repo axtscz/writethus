@@ -10,13 +10,22 @@ var seed = randomseed.create("ALEX");
 
 const server = express();
 const oneDay = 86400000;
-server.use('/assets', express.static(__dirname + '/assets', {maxage: oneDay}));
-server.use('/fonts', express.static(__dirname + '/assets/fonts', {maxage: oneDay*31}));
+server.use(
+    "/assets",
+    express.static(__dirname + "/assets")
+);
+server.use(
+    "/fonts",
+    express.static(__dirname + "/assets/fonts", {maxage: oneDay * 31})
+);
 server.get("/sw", function (req, res) {
-    res.sendFile(__dirname + "/assets/serviceworker/serviceworker.js")
+    res.sendFile(__dirname + "/assets/serviceworker/serviceworker.js");
+});
+server.get("/favicon.ico", function (req, res) {
+    res.sendFile(__dirname + "/assets/img/favicon.ico");
 });
 
-server.get(["/", '/:id'], (req, res) => {
+server.get(["/", "/:id"], (req, res) => {
     let seedValue = "";
     if (req.params.id) {
         seedValue = req.params.id;
@@ -26,28 +35,30 @@ server.get(["/", '/:id'], (req, res) => {
         seed = randomseed.create(seedValue);
     }
     //generate all the data
-
     let culture = utility.generateCulture(seed);
     let characters = utility.generateCharacters(seed, 5, "EN");
     let location = utility.pickLocation(seed);
     let genre = utility.pickGenre(seed);
     let url = "writeth.us" + req.url.toString();
+    let combinations = utility.calculateCombinations();
 
     const initialState = {
         characters: characters,
         url: url,
         location: location.location,
         genre: genre.genre,
-        seed: seedValue
+        seed: seedValue,
+        combinations: combinations.toString()
     };
     const appString = renderToString(<App {...initialState} />);
-    res.send(template({
-        body: appString,
-        title: 'WriteThus - Writing Prompts',
-        initialState: JSON.stringify(initialState)
-    }));
-
+    res.send(
+        template({
+            body: appString,
+            title: "WriteThus - Writing Prompts",
+            initialState: JSON.stringify(initialState)
+        })
+    );
 });
 
 server.listen(8080);
-console.log('LISTENING');
+console.log("LISTENING");
