@@ -1,10 +1,10 @@
-var webpack = require('webpack');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var nodeExternals = require('webpack-node-externals');
+var webpack = require("webpack");
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
+var nodeExternals = require("webpack-node-externals");
 
 var isProduction = true;
 var productionPluginDefine = isProduction ? [
-  new webpack.DefinePlugin({'process.env': {'NODE_ENV': JSON.stringify('production')}})
+  new webpack.DefinePlugin({"process.env": {"NODE_ENV": JSON.stringify("production")}})
 ] : [];
 var clientLoaders = isProduction ? productionPluginDefine.concat([
   new webpack.optimize.DedupePlugin(),
@@ -15,20 +15,20 @@ var clientLoaders = isProduction ? productionPluginDefine.concat([
 var commonLoaders = [
   {
     test: /\.json$/,
-    loader: 'json-loader'
+    loader: "json-loader"
   }
 ];
 
 module.exports = [
   {
-    entry: './src/server.js',
+    entry: "./src/server.js",
     output: {
-      path: './dist',
-      filename: 'server.js',
-      libraryTarget: 'commonjs2',
-      publicPath: '/'
+      path: "./dist",
+      filename: "server.js",
+      libraryTarget: "commonjs2",
+      publicPath: "/"
     },
-    target: 'node',
+    target: "node",
     node: {
       console: false,
       global: false,
@@ -43,17 +43,17 @@ module.exports = [
       loaders: [
         {
           test: /\.js$/,
-          loader: 'babel'
+          loader: "babel"
         }
       ].concat(commonLoaders)
     }
   },
   {
-    entry: './src/app/browser.js',
+    entry: "./src/app/browser.js",
     output: {
-      path: './dist/assets',
-      publicPath: '/',
-      filename: 'bundle.js'
+      path: "./dist/assets",
+      publicPath: "/",
+      filename: "bundle.js"
     },
     plugins: clientLoaders.concat([
       new ExtractTextPlugin( {filename: "index.css",
@@ -65,16 +65,16 @@ module.exports = [
         {
           test: /\.js$/,
           exclude: /node_modules/,
-          loader: 'babel'
+          loader: "babel"
         },
         {
           test: /\.scss$/,
-          loader: ExtractTextPlugin.extract('css!sass')
+          loader: ExtractTextPlugin.extract("css!sass")
         }
       ]
     },
     resolve: {
-      extensions: ['', '.js', '.jsx']
+      extensions: ["", ".js", ".jsx"]
     }
   }
 ];
