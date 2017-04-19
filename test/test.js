@@ -70,6 +70,6 @@ describe("Generate Functions", function(){
             it("it should be either M or F", function () {
                 utilities.default.pickGender(seed).should.match(/[FM]/);
             });
-        })
+        });
     });
 });
