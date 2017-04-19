@@ -20,9 +20,9 @@ export default ({body, title, initialState}) => {
       <body>
         <div id="root" class="container">${body}</div>
       </body>
-      <link rel="stylesheet" href="/assets/skeleton.min.css" />
-      <link rel="stylesheet" href="/assets/style.min.css" />
-      <link rel="stylesheet" href="/assets/font-awesome.min.css" />
+      <link rel="stylesheet" href="/assets/css/skeleton.min.css" />
+      <link rel="stylesheet" href="/assets/css/style.min.css" />
+      <link rel="stylesheet" href="/assets/css/font-awesome.min.css" />
       <script src="/assets/bundle.js"></script>
       <script>
           (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

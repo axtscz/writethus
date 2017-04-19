@@ -18,6 +18,10 @@ server.use(
     "/fonts",
     express.static(__dirname + "/assets/fonts", {maxage: oneDay * 31})
 );
+server.use(
+    "/assets/css",
+    express.static(__dirname + "/assets/css", {maxage: oneDay})
+);
 server.get("/sw", function (req, res) {
     res.sendFile(__dirname + "/assets/serviceworker/serviceworker.js");
 });

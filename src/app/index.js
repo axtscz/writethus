@@ -18,7 +18,7 @@ export default class App extends Component {
                     <h1>WriteThus</h1>
                     <p>Write a story using the following components. There are <FormattedNumber
                         value={this.props.combinations}/> possible combinations.</p>
-                    <a href="/">New</a>
+                    <a className="button" href="/">New</a>
 
                     <div className="row">
                         <div className="four columns">

@@ -12,7 +12,7 @@ export default class Character extends React.Component {
         return (
             <div>
                 <h4>{capitalize(this.props.character.name.toLowerCase())} </h4>
-                <h6>{this.props.character.occupation.occupation}</h6>
+                <p>{this.props.character.occupation.occupation}</p>
             </div>
         );
     }
