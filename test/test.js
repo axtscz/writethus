@@ -29,7 +29,7 @@ describe("Generate Functions", function(){
             it("it needs to have a length of 6 if asked", function () {
                 utilities.default.generateCharacters(seed, 6).length.should.be.within(2, 6);
             });
-        })
+        });
     });
     describe("Generate Culture",function () {
         describe("Generate a culture", function () {
@@ -48,7 +48,7 @@ describe("Generate Functions", function(){
             it("it should contain a location", function () {
                 utilities.default.pickLocation(seed).should.have.keys("location");
             });
-        })
+        });
     });
     describe("Generate Genre",function () {
         describe("Generate a Genre", function () {
@@ -59,7 +59,7 @@ describe("Generate Functions", function(){
             it("it should contain a genre", function () {
                 utilities.default.pickGenre(seed).should.have.keys("genre");
             });
-        })
+        });
     });
     describe("Pick Gender",function () {
         describe("Pick a gender", function () {
