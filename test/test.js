@@ -17,7 +17,7 @@ describe("Generate Functions", function(){
             });
             it("it needs to have a length of 6", function () {
                 utilities.default.randomSeedString(6).should.have.length(6);
-            })
+            });
         });
     });
     describe("Generate Characters",function () {
@@ -28,7 +28,7 @@ describe("Generate Functions", function(){
             });
             it("it needs to have a length of 6 if asked", function () {
                 utilities.default.generateCharacters(seed, 6).length.should.be.within(2, 6);
-            })
+            });
         })
     });
     describe("Generate Culture",function () {
