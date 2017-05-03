@@ -30,6 +30,7 @@
   {"occupation": "Heir to a fortune", "gender": ["M", "F"]},
   {"occupation": "Struggling Actress", "gender": ["F"]},
   {"occupation": "Schizophrenic Politician", "gender": ["M", "F"]},
+  {"occupation": "Corrupt Police Chief", "gender": ["M", "F"]},
   {"occupation": "Socialite", "gender": ["F"]},
   {"occupation": "Playboy", "gender": ["M"]},
   {"occupation": "Astronaut", "gender": ["M", "F"]},
