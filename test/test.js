@@ -8,9 +8,8 @@ const utilities = require("../lib/utility.js");
 const randomseed = require("random-seed");
 
 
-
-describe("Generate Functions", function(){
-    describe("Generate Seed String",function () {
+describe("Generate Functions", function () {
+    describe("Generate Seed String", function () {
         describe("Generate seed string", function () {
             it("it should return an string", function () {
                 utilities.default.randomSeedString(6).should.be.a.String();
@@ -20,7 +19,7 @@ describe("Generate Functions", function(){
             });
         });
     });
-    describe("Generate Characters",function () {
+    describe("Generate Characters", function () {
         describe("Generate a list of people", function () {
             let seed = randomseed();
             it("it should return an array", function () {
@@ -31,15 +30,15 @@ describe("Generate Functions", function(){
             });
         });
     });
-    describe("Generate Culture",function () {
+    describe("Generate Culture", function () {
         describe("Generate a culture", function () {
             let seed = randomseed();
             it("it should return an String", function () {
                 utilities.default.generateCulture(seed).should.be.a.String();
             });
-        })
+        });
     });
-    describe("Generate Location",function () {
+    describe("Generate Location", function () {
         describe("Generate a list of people", function () {
             let seed = randomseed();
             it("it should return an Object", function () {
@@ -50,7 +49,7 @@ describe("Generate Functions", function(){
             });
         });
     });
-    describe("Generate Genre",function () {
+    describe("Generate Genre", function () {
         describe("Generate a Genre", function () {
             let seed = randomseed();
             it("it should return an Object", function () {
@@ -61,7 +60,7 @@ describe("Generate Functions", function(){
             });
         });
     });
-    describe("Pick Gender",function () {
+    describe("Pick Gender", function () {
         describe("Pick a gender", function () {
             let seed = randomseed();
             it("it should return an String", function () {
@@ -70,6 +69,12 @@ describe("Generate Functions", function(){
             it("it should be either M or F", function () {
                 utilities.default.pickGender(seed).should.match(/[FM]/);
             });
+        });
+    });
+    describe("Calculate Combinations", function () {
+        let seed = randomseed();
+        it("it should return an Number", function () {
+            utilities.default.calculateCombinations(seed).should.be.a.Object();
         });
     });
 });
