@@ -6,6 +6,9 @@
     "genre": "Mystery"
   },
   {
+    "genre": "Action/Adventure"
+  },
+  {
     "genre": "Political Thriller"
   },
   {
@@ -22,5 +25,13 @@
   },
   {
     "genre": "Fantasy"
+  },{
+    "genre": "Horror"
+  },
+  {
+    "genre": "Satire"
+  },
+  {
+    "genre": "Poetry"
   }
 ]

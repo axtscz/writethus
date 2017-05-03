@@ -16,8 +16,7 @@ export default class App extends Component {
             <IntlProvider locale="en">
                 <div>
                     <h1>WriteThus</h1>
-                    <p>Write a story using the following components. There are <FormattedNumber
-                        value={this.props.combinations}/> possible combinations.</p>
+                    <p>Write thus (or don't, it's just a suggestion): </p>
                     <a className="button" href="/">New</a>
 
                     <div className="row">
