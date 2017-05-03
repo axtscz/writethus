@@ -1,6 +1,5 @@
 export default ({body, title, initialState}) => {
-    return `
-    <!DOCTYPE html>
+    return `<!DOCTYPE html>
     <html>
       <head>
         <script>window.__APP_INITIAL_STATE__ = ${initialState}</script>
@@ -34,6 +33,5 @@ export default ({body, title, initialState}) => {
           ga('send', 'pageview');
         
       </script>
-    </html>
-  `;
+    </html>`;
 };

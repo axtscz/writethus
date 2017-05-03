@@ -9,6 +9,7 @@ import utility from "../lib/utility.js";
 var seed = randomseed.create("ALEX");
 
 const server = express();
+server.use(express.compress());
 const oneDay = 86400000;
 
 server.use(
