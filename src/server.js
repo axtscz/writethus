@@ -10,17 +10,18 @@ var seed = randomseed.create("ALEX");
 
 const server = express();
 const oneDay = 86400000;
-server.use(
-    "/assets",
-    express.static(__dirname + "/assets")
-);
+
 server.use(
     "/fonts",
-    express.static(__dirname + "/assets/fonts", {maxage: oneDay * 31})
+    express.static(__dirname + "/assets/fonts", {maxage: 86400000 * 30})
 );
 server.use(
     "/assets/css",
-    express.static(__dirname + "/assets/css", {maxage: oneDay})
+    express.static(__dirname + "/assets/css", {maxage: 86400000})
+);
+server.use(
+    "/assets",
+    express.static(__dirname + "/assets", {maxage: 900000})
 );
 server.get("/sw", function (req, res) {
     res.sendFile(__dirname + "/assets/serviceworker/serviceworker.js");
